@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie Player App</string>
+    <string name="choose_movies_category">Choose Movies Category</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="no_video_selected">No Video Selected</string>
+    <string name="enter_movie_description">Enter Movie Description</string>
+    <string name="upload">Upload</string>
+</resources>
