@@ -5,4 +5,5 @@
     <string name="no_video_selected">No Video Selected</string>
     <string name="enter_movie_description">Enter Movie Description</string>
     <string name="upload">Upload</string>
+    <string name="choose_movies_type">Choose Movies Type</string>
 </resources>

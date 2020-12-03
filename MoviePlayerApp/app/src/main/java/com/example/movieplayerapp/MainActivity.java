@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setOnItemSelectedListener(this);
 
         List<String> Categories = new ArrayList<>();
-        Categories.add("Actions");
+        Categories.add("Action");
         Categories.add("Adventure");
         Categories.add("Sports");
         Categories.add("Romantic");
@@ -92,20 +92,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        String Path = null;
-        Cursor cursor;
-        int columnIndexData;
-        String[] projection = {MediaStore.MediaColumns.DATA, MediaStore.Video.Media.BUCKET_DISPLAY_NAME,
-                MediaStore.Video.Media._ID, MediaStore.Video.Thumbnails.DATA};
-        final String orderby = MediaStore.Video.Media.DEFAULT_SORT_ORDER;
-        cursor = MainActivity.this.getContentResolver().query(videoUri, projection, null, null, orderby);
-        columnIndexData = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
+        if(requestCode == 101 && resultCode == RESULT_OK && data.getData() != null) {
 
-        while (cursor.moveToNext()) {
-            Path = cursor.getString(columnIndexData);
-            videoTitle = FilenameUtils.getBaseName(Path);
+            videoUri = data.getData();
+
+            String path = null;
+            Cursor cursor;
+            int columnIndexData;
+            String[] projection = {MediaStore.MediaColumns.DATA, MediaStore.Video.Media.BUCKET_DISPLAY_NAME,
+                    MediaStore.Video.Media._ID, MediaStore.Video.Thumbnails.DATA};
+            final String orderby = MediaStore.Video.Media.DEFAULT_SORT_ORDER;
+            cursor = MainActivity.this.getContentResolver().query(videoUri, projection, null, null, orderby);
+            columnIndexData = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
+
+            while (cursor.moveToNext()) {
+                path = cursor.getString(columnIndexData);
+                videoTitle = FilenameUtils.getBaseName(path);
+            }
+            text_video_selected.setText(videoTitle);
         }
-        text_video_selected.setText(videoTitle);
     }
 
     public void uploadFileToFirebase(View view) {
@@ -143,6 +148,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             referenceVideos.child(uploadID).setValue(videoUploadDetails);
                             currentUid = uploadID;
                             progressDialog.dismiss();
+
+                            if(currentUid.equals(uploadID)){
+                                startThumbnailActivity();
+                            }
                         }
                     });
                 }
@@ -157,4 +166,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Toast.makeText(this, "No Video Selected to Upload", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void startThumbnailActivity(){
+        Intent in = new Intent(MainActivity.this, UploadThumbnailActivity.class);
+        in.putExtra("currentUid", currentUid);
+        in.putExtra("thumbnailName", videoTitle);
+        startActivity(in);
+
+        Toast.makeText(this, "Video uploaded Successfully... Upload video Thumbnail!!!", Toast.LENGTH_LONG).show();
+    }
+
 }

@@ -19,7 +19,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:text="@string/choose_movies_category"
+            android:text="Choose Movies Category"
             android:layout_marginBottom="5dp"/>
 
         <Spinner
@@ -37,14 +37,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/uploadVideoButton"
                 android:onClick="openVideoFiles"
-                android:text="@string/upload_video"/>
+                android:text="Upload Video"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:gravity="center"
-                android:text="@string/no_video_selected"
+                android:text="No Video Selected"
                 android:id="@+id/textVideoSelected"
                 android:layout_marginLeft="10dp" />
 
@@ -53,7 +53,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_movie_description"
+            android:hint="Enter Movie Description"
             android:layout_marginTop="10dp"
             android:id="@+id/moviesDescription"/>
 
@@ -64,7 +64,7 @@
             android:id="@+id/buttonUpload"
             android:onClick="uploadFileToFirebase"
             android:textStyle="bold"
-            android:text="@string/upload"/>
+            android:text="Upload"/>
 
     </LinearLayout>
 
