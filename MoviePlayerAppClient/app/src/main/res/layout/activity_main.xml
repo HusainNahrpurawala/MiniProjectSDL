@@ -24,11 +24,11 @@
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="@+id/slider_pager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:tabBackground="@drawable/indicator_selector"
-            android:background="@color/colorPrimary"
             app:tabGravity="center"
             app:tabIndicatorHeight="0dp" />
 
@@ -40,10 +40,10 @@
             android:text="Most popular Movies"
             android:textAllCaps="true"
             android:textColor="@color/text_light_blue"
-            app:layout_constraintBottom_toBottomOf="@+id/indicator"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indicator" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_movies"
