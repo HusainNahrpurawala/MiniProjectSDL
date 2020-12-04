@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "212723075140",
+    "firebase_url": "https://movie-player-app-261ef.firebaseio.com",
+    "project_id": "movie-player-app-261ef",
+    "storage_bucket": "movie-player-app-261ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212723075140:android:e048227bfc6597579e1411",
+        "android_client_info": {
+          "package_name": "com.example.movieplayerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212723075140-rfgm5hbvvshb38t330d4g12t2n71culd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1uuA2HO4UnJCeI9ZbTJOyQ0c_CsbheCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212723075140-rfgm5hbvvshb38t330d4g12t2n71culd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212723075140:android:d6495d5383ea6b4f9e1411",
+        "android_client_info": {
+          "package_name": "com.example.movieplayerappclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212723075140-rfgm5hbvvshb38t330d4g12t2n71culd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1uuA2HO4UnJCeI9ZbTJOyQ0c_CsbheCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212723075140-rfgm5hbvvshb38t330d4g12t2n71culd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

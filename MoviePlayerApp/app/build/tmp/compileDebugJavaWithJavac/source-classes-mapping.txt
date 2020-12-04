@@ -1,5 +1,8 @@
-com/example/movieplayerapp/Model/VideoUploadDetails.java
- com.example.movieplayerapp.Model.VideoUploadDetails
+com/example/movieplayerapp/MainActivity.java
+ com.example.movieplayerapp.MainActivity
+ com.example.movieplayerapp.MainActivity$1
+ com.example.movieplayerapp.MainActivity$2
+ com.example.movieplayerapp.MainActivity$2$1
 com/example/movieplayerapp/BuildConfig.java
  com.example.movieplayerapp.BuildConfig
 com/example/movieplayerapp/UploadThumbnailActivity.java
@@ -12,8 +15,5 @@ com/example/movieplayerapp/UploadThumbnailActivity.java
  com.example.movieplayerapp.UploadThumbnailActivity$6
  com.example.movieplayerapp.UploadThumbnailActivity$7
  com.example.movieplayerapp.UploadThumbnailActivity$7$1
-com/example/movieplayerapp/MainActivity.java
- com.example.movieplayerapp.MainActivity
- com.example.movieplayerapp.MainActivity$1
- com.example.movieplayerapp.MainActivity$2
- com.example.movieplayerapp.MainActivity$2$1
+com/example/movieplayerapp/Model/VideoUploadDetails.java
+ com.example.movieplayerapp.Model.VideoUploadDetails

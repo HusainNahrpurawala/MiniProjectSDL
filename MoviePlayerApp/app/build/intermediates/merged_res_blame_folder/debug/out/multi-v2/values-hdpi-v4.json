@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/husainnahar/Desktop/work/Programs/College/SDL/MiniProjectSDL/MoviePlayerApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "D:\\sdl\\MiniProject\\MiniProjectSDL\\MoviePlayerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/husainnahar/.gradle/caches/transforms-2/files-2.1/f65e7d690d0436991c66205f0487ed30/appcompat-1.2.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "C:\\Users\\suyas\\.gradle\\caches\\transforms-2\\files-2.1\\f65e7d690d0436991c66205f0487ed30\\appcompat-1.2.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
