@@ -3,6 +3,7 @@ package com.example.movieplayerappclient;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +46,16 @@ public class MovieDetailsActivity extends AppCompatActivity implements MovieItem
         inView();
         similarMoviesRecycler();
         similarMovies();
+
+        play_fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MovieDetailsActivity.this,MovieDetailsActivity.class);
+                intent.putExtra("videoUri",current_video_url);
+                startActivity(intent);
+            }
+        });
     }
 
     private void similarMovies() {
