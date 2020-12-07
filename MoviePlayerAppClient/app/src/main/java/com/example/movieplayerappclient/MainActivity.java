@@ -2,7 +2,9 @@ package com.example.movieplayerappclient;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.app.ActivityOptions;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -209,7 +211,18 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
 
     @Override
     public void onMovieClick(GetVideoDetails getVideoDetails, ImageView imageView) {
-
+        Intent intent = new Intent(this, MovieDetailsActivity.class);
+        intent.putExtra("title", getVideoDetails.getVideo_name());
+        intent.putExtra("imgURL", getVideoDetails.getVideo_thumb());
+        intent.putExtra("movieDetails", getVideoDetails.getVideo_description());
+        intent.putExtra("imgCover", getVideoDetails.getVideo_thumb());
+        intent.putExtra("movieUrl", getVideoDetails.getVideo_url());
+        intent.putExtra("movieCategory", getVideoDetails.getVideo_category());
+        ActivityOptions options = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, imageView, "sharedName");
+        }
+        startActivity(intent, options.toBundle());
     }
 
     public class SliderTimer extends TimerTask {
